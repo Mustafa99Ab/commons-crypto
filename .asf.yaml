@@ -27,3 +27,7 @@ notifications:
     pullrequests_bot_dependabot: notifications@commons.apache.org
     issues_bot_codecov-commenter: notifications@commons.apache.org
     pullrequests_bot_codecov-commenter: notifications@commons.apache.org
+ - name: Upload coverage reports to Codecov
+  uses: codecov/codecov-action@v3
+  env:
+    CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
